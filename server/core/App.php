@@ -19,6 +19,9 @@ class App {
     if(file_exists('./server/controller/' . $url[0] . '.php')) {
       $this->controller = $url[0];
       unset($url[0]);
+    } else {
+      $this->controller = "ErrorHandler";
+      $this->method = "pageNotFound";
     }
     require_once './server/controller/' . $this->controller . '.php';
     $this->controller = new $this->controller;
