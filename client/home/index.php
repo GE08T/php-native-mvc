@@ -7,14 +7,12 @@
 </head>
 <body>
   <h1>Home</h1> <br>
-  <?php foreach($data['mhs'] as $data) { ?>
+  <?php foreach($data['mhs'] as $data) { 
+     
+    ?>
     <ul>
-      <li>ID : <?= $data['id'] ?></li>
-      <li>NAMA : <?= $data['nama'] ?></li>
-      <li>NIM : <?= $data['nim'] ?></li>
-      <li>JURUSAN : <?= $data['jurusan'] ?></li>
-      <li>SEMESTER : <?= $data['semester'] ?></li>
-      <li>EMAIL : <?= $data['email'] ?></li>
+      <li>NIM : <?php echo $data['nim'] ?></li>
+      <li>NAMA : <?php echo $data['nama_lengkap'] ?></li>
     </ul>
     <br>
   <?php } ?>
